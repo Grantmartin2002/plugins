@@ -74,9 +74,8 @@ func MaxMsgSize(s int) server.Option {
 	return setServerOption(maxMsgSizeKey{}, s)
 }
 
-// GracefulStopTimeout sets the maximum duration the server will wait for
-// in-flight requests to complete during graceful shutdown before forcefully
-// stopping. Default is 1 second.
+// GracefulStopTimeout set the timeout for the server to stop gracefully
+// before forcefully stopping.  Default is 1 second.
 func GracefulStopTimeout(d time.Duration) server.Option {
 	return setServerOption(gracefulStopTimeoutKey{}, d)
 }
